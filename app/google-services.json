@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "85014644833",
+    "firebase_url": "https://befearless-fbdfb.firebaseio.com",
+    "project_id": "befearless-fbdfb",
+    "storage_bucket": "befearless-fbdfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85014644833:android:7b0bf8206b6ad59c",
+        "android_client_info": {
+          "package_name": "xyz.sudocoding.befearless"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85014644833-3u34n8v0l84a74ocum1qhq5icgt39190.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "xyz.sudocoding.befearless",
+            "certificate_hash": "46f01f6539c25b8dd7dce0f1d9c30ff9ab9be663"
+          }
+        },
+        {
+          "client_id": "85014644833-h557pagqdinm6frl88k02dejqa97lj9j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3wmmrLjl6PlE_XOdnsUHNJ_M6uhizyyQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85014644833-h557pagqdinm6frl88k02dejqa97lj9j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
