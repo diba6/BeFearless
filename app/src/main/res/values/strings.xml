@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Be Fearless</string>
+
+    <!-- LOGIN STRINGS -->
+    <string name="phone_hint">Phone number</string>
+    <string name="password_hint">Password</string>
+    <string name="login_btn_text">Login</string>
+    <string name="register_btn_text">Register</string>
+</resources>
