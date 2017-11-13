@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //-------------------------------- PRIVATES
     /*
-    * Method  to load up initial setup
+    * Method to load up initial setup
     * */
     private void __init__(){
         final EditText phoneET = (EditText) findViewById(R.id.phoneET);
@@ -44,8 +45,19 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String phoneText = phoneET.getText().toString();
                 String passText = passwordET.getText().toString();
-
+                if(phoneText!=null && !phoneText.equals("") && passText!=null && !passText.equals("")){
+                    attemptLogin(phoneText, passText);
+                } else {
+                    Toast.makeText(LoginActivity.this, "Phone or password field is empty", Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    /*
+    * Method to attempt login operation
+    * */
+    private boolean attemptLogin(String phoneText, String passText){
+        return false;
     }
 }
