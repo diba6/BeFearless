@@ -162,7 +162,7 @@ public class LoginActivity extends AppCompatActivity implements AuthenticationLi
     * */
     private void nextActivity(){
         // TODO: Add the intent of the next activity
-        Intent nextAct = new Intent(this, LoginActivity.class);
+        Intent nextAct = new Intent(this, MainActivity.class);
         startActivity(nextAct);
     }
 

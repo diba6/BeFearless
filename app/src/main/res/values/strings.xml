@@ -6,4 +6,17 @@
     <string name="password_hint">Password</string>
     <string name="login_btn_text">Login</string>
     <string name="register_btn_text">Register</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- MAIN ACTIVITY STRINGS -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- HOME FRAGMENT -->
+    <string name="share_location_btn">Share location</string>
+    <string name="send_message">Send message</string>
+    <string name="make_call">Make a call</string>
+    <string name="share_location_default">Default share</string>
+    <string name="share_location_social">Social share</string>
 </resources>
