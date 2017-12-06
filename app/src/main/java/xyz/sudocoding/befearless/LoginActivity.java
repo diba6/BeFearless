@@ -14,14 +14,14 @@ import xyz.sudocoding.befearless.listeners.AuthenticationListener;
 
 public class LoginActivity extends AppCompatActivity implements AuthenticationListener {
 
-    private boolean isLoggedIn;
+    private boolean isLoggedIn = false;
     private AuthenticationHandler authHandler;
 
-    private final EditText emailET = (EditText) findViewById(R.id.emailET);
-    private final EditText passwordET = (EditText) findViewById(R.id.passET);
-    private final ProgressBar pb = (ProgressBar) findViewById(R.id.loginProgressBar);
-    private final Button loginBTN = (Button) findViewById(R.id.loginBTN);
-    private final Button registerBtn = (Button) findViewById(R.id.registerBTN);
+    private EditText emailET;
+    private EditText passwordET;
+    private ProgressBar pb;
+    private Button loginBTN;
+    private Button registerBtn;
 
     //-------------------------------- DEFAULTS
     @Override
@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity implements AuthenticationLi
     protected void onStart(){
         super.onStart();
         // Start firebase auth listener
-        authHandler.startAuthListener();
+        //authHandler.startAuthListener();
     }
 
     @Override
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements AuthenticationLi
     protected void onStop(){
         super.onStop();
         // Stop firebase auth listener
-        authHandler.stopAuthListener();
+        //authHandler.stopAuthListener();
     }
 
     //-------------------------------- PUBLIC
@@ -94,7 +94,13 @@ public class LoginActivity extends AppCompatActivity implements AuthenticationLi
     * Method to load up initial setup
     * */
     private void __init__(){
-        authHandler = new AuthenticationHandler(this);
+        emailET = (EditText) findViewById(R.id.emailET);
+        passwordET = (EditText) findViewById(R.id.passET);
+        pb = (ProgressBar) findViewById(R.id.loginProgressBar);
+        loginBTN = (Button) findViewById(R.id.loginBTN);
+        registerBtn = (Button) findViewById(R.id.registerBTN);
+
+        //authHandler = new AuthenticationHandler(this);
 
         pb.setVisibility(View.GONE);
 
@@ -103,12 +109,13 @@ public class LoginActivity extends AppCompatActivity implements AuthenticationLi
             public void onClick(View view) {
                 String emailText = emailET.getText().toString();
                 String passText = passwordET.getText().toString();
-                if(emailText!=null && !emailText.equals("") && passText!=null && !passText.equals("")){
-                    userInteract(false);
-                    attemptLogin(emailText, passText);
-                } else {
-                    Toast.makeText(LoginActivity.this, "Email or password field is empty", Toast.LENGTH_SHORT).show();
-                }
+//                if(emailText!=null && !emailText.equals("") && passText!=null && !passText.equals("")){
+//                    userInteract(false);
+//                    attemptLogin(emailText, passText);
+//                } else {
+//                    Toast.makeText(LoginActivity.this, "Email or password field is empty", Toast.LENGTH_SHORT).show();
+//                }
+                logIn(true);
             }
         });
 
@@ -117,12 +124,13 @@ public class LoginActivity extends AppCompatActivity implements AuthenticationLi
             public void onClick(View view) {
                 String emailText = emailET.getText().toString();
                 String passText = passwordET.getText().toString();
-                if(emailText!=null && !emailText.equals("") && passText!=null && !passText.equals("")){
-                    userInteract(false);
-                    attemptSignUp(emailText, passText);
-                } else {
-                    Toast.makeText(LoginActivity.this, "Email or password field is empty", Toast.LENGTH_SHORT).show();
-                }
+//                if(emailText!=null && !emailText.equals("") && passText!=null && !passText.equals("")){
+//                    userInteract(false);
+//                    attemptSignUp(emailText, passText);
+//                } else {
+//                    Toast.makeText(LoginActivity.this, "Email or password field is empty", Toast.LENGTH_SHORT).show();
+//                }
+                signedUp(true);
             }
         });
     }

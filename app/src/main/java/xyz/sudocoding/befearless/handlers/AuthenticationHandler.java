@@ -78,6 +78,10 @@ public class AuthenticationHandler {
         });
     }
 
+    public void signOut(){
+        mAuth.signOut();
+    }
+
     public Map<String, String> getUserInfo(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         final Map<String, String> userData = new HashMap<String, String>();

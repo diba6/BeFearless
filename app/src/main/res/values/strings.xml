@@ -19,4 +19,10 @@
     <string name="make_call">Make a call</string>
     <string name="share_location_default">Default share</string>
     <string name="share_location_social">Social share</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- CONTACT FRAGMENT -->
 </resources>
